@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dustin's Awesome Coffee</title>
+<meta name="description" content="Dustin's Awesome Coffee: espresso, lattes, iced drinks and cold brew.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#2a1a10; --bg2:#382416; --ink:#f7ecd9; --muted:#d3bfa3; --gold:#f2c230; --line:#0d0704;
+  --paper:#f6f0e4; --paper-ink:#2a1a10;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#2a1a10; } }
+:root[data-theme="dark"]{ --bg:#2a1a10; }
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{font-family:"Bevan",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.05;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+
+.hero{padding:2.5rem 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);color:var(--ink)}
+.hero p{max-width:30rem;color:var(--muted);font-size:1.2rem;margin:1.25rem 0 2rem}
+.btn{display:inline-block;background:var(--gold);color:var(--line);font-weight:600;text-decoration:none;
+  padding:.9rem 1.6rem;border:3px solid var(--line);border-radius:6px;box-shadow:4px 4px 0 var(--line);
+  transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--line)}
+.frame{margin:0;border:4px solid var(--line);border-radius:8px;box-shadow:10px 10px 0 var(--gold);overflow:hidden;background:#000}
+.frame img{display:block;width:100%;height:auto}
+
+.menu{background:var(--bg2);padding:4.5rem 0;border-top:4px solid var(--line);border-bottom:4px solid var(--line)}
+.menu .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.menu h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1rem}
+.menu p{color:var(--muted);max-width:26rem}
+.menu .frame{box-shadow:10px 10px 0 var(--line);border-color:var(--paper);max-width:520px;justify-self:center}
+
+.visit{padding:4.5rem 0}
+.visit h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:2rem}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem}
+.info h3{font-family:"Bevan",Georgia,serif;font-weight:400;font-size:1.3rem;color:var(--gold);margin:0 0 .5rem}
+.info p{margin:0;color:var(--muted)}
+footer{padding:1.5rem 0 2.5rem;border-top:1px solid #4a3323;color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero .wrap,.menu .wrap{grid-template-columns:1fr;gap:2.25rem}
+  .hero{padding-top:1.5rem}
+  .hero .frame{order:-1;max-width:420px;justify-self:center}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dustin's Awesome Coffee</h1>
+      <p>Strong coffee, made fresh and served with a smile. Espresso, lattes, iced drinks and cold brew.</p>
+      <a class="btn" href="#menu">See the menu</a>
+    </div>
+    <figure class="frame">
+      <img src="hero.jpg" width="896" height="1195" alt="Illustration of Dustin, a muscular, bearded barista in a Gold's Gym tank top, holding two huge steaming coffees at his coffee stand.">
+    </figure>
+  </div>
+</header>
+
+<main>
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div>
+        <h2>The menu</h2>
+        <p>Espresso drinks, milk and specialty drinks, and iced classics. Ask at the counter for today's beans.</p>
+      </div>
+      <figure class="frame">
+        <img src="menu.jpg" width="896" height="1195" loading="lazy" alt="Menu. Espresso drinks: Espresso, Americano, Macchiato, Cortado. Milk and specialty: Cappuccino, Latte, Mocha, Flat White. Iced classics: Iced Americano, Iced Latte, Iced Mocha, Cold Brew.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <h2>Come say hi</h2>
+      <div class="info">
+        <div><h3>Where</h3><p>Add your address here</p></div>
+        <div><h3>Hours</h3><p>Add your opening hours here</p></div>
+        <div><h3>Contact</h3><p>Add your phone or email here</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; Dustin's Awesome Coffee</div>
+</footer>
+
+</body>
+</html>
